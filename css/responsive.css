@@ -1,0 +1,487 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   THE ULTIMATE ROMANTIC RESPONSIVE STYLESHEET
+   Menyesuaikan tampilan dari Desktop ke Mobile agar tetap indah dan rapi.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. UTILITY CLASSES (BAWAAN PORTOFOLIO ASLI)
+   -------------------------------------------------------------------------- */
+@media only screen and (max-width: 1600px) {
+  .hide-xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hide-md {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLET & SMALL LAPTOP ADAPTATION (max-width: 992px)
+   -------------------------------------------------------------------------- */
+@media only screen and (max-width: 992px) {
+  /* Global Container & Box */
+  .container {
+    width: 95%;
+    height: auto;
+    padding: 60px 0;
+  }
+  .glass-box {
+    padding: 30px;
+    border-radius: 20px !important;
+  }
+
+  /* Layout Grid (Stack vertically) */
+  .row {
+    flex-direction: column;
+  }
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Typography Scaling */
+  .hero-title {
+    font-size: 3.8rem !important;
+  }
+  .section-title {
+    font-size: 2.8rem !important;
+    margin-bottom: 10px;
+  }
+  .section-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  /* Hero Section Specifics */
+  .divider-line {
+    width: 60px;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  /* Envelope Resizing untuk Layar Sedang */
+  .envelope {
+    width: 280px;
+    height: 190px;
+  }
+  .envelope-flap-top {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 110px solid #ff9db0;
+  }
+  .envelope-flap-bottom {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 95px solid #ffb6c1;
+  }
+  .envelope-flap-left {
+    border-top: 95px solid transparent;
+    border-bottom: 95px solid transparent;
+    border-left: 140px solid #ffc4d3;
+  }
+  .envelope-flap-right {
+    border-top: 95px solid transparent;
+    border-bottom: 95px solid transparent;
+    border-right: 140px solid #ffc4d3;
+  }
+  .wax-seal {
+    top: 85px;
+    left: 115px;
+  }
+  .envelope.open .env-letter {
+    transform: translateY(-110px);
+  }
+
+  /* Timeline Section (Ubah ke sisi kiri semua) */
+  .vertical-timeline-wrapper::after {
+    left: 30px;
+  }
+  .timeline-block {
+    width: 100%;
+    padding-left: 70px !important;
+    padding-right: 10px !important;
+  }
+  .right-block {
+    left: 0;
+  }
+  .timeline-dot-wrapper {
+    left: 15px !important;
+    right: auto !important;
+  }
+  .left-block .timeline-content {
+    border-left: 4px solid transparent;
+    border-right: none;
+  }
+
+  /* Gallery Folder Section */
+  .folder-nav-column {
+    border-right: none;
+    border-bottom: 2px dashed rgba(216, 27, 96, 0.2);
+    padding-bottom: 20px;
+  }
+  .folder-navigation-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .folder-content-column {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  /* Flip Cards Section */
+  .flip-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .flip-card-wrapper {
+    height: 160px;
+  }
+  .flip-front span {
+    font-size: 3rem !important;
+  }
+
+  /* Scrapbook Letter */
+  .scrapbook-board {
+    padding: 40px 30px !important;
+  }
+  .letter-main-title {
+    font-size: 3rem !important;
+  }
+  .btn-whatsapp-massive {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES ADAPTATION (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  /* Navigasi Samping */
+  .side-navigation {
+    right: 10px;
+  }
+  .side-nav li::after {
+    display: none !important;
+  } /* Sembunyikan tooltip teks di HP agar tidak menutupi layar */
+
+  /* Hero Title Drop */
+  .hero-title {
+    font-size: 3.2rem !important;
+  }
+
+  /* Profile Section Adjustment */
+  .photo-column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .premium-polaroid {
+    transform: rotate(0deg);
+    width: 85%;
+    max-width: 300px;
+  }
+  .premium-polaroid:hover {
+    transform: scale(1.02) rotate(0deg);
+  } /* Kurangi rotasi hover di HP */
+  .info-wrapper {
+    padding: 15px !important;
+  }
+  .list-item-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .list-label {
+    min-width: auto;
+  }
+
+  /* Envelope Resizing untuk Layar Kecil (HP) */
+  .envelope {
+    width: 240px;
+    height: 160px;
+  }
+  .envelope-flap-top {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-top: 95px solid #ff9db0;
+  }
+  .envelope-flap-bottom {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 80px solid #ffb6c1;
+  }
+  .envelope-flap-left {
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-left: 120px solid #ffc4d3;
+  }
+  .envelope-flap-right {
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-right: 120px solid #ffc4d3;
+  }
+  .wax-seal {
+    top: 65px;
+    left: 95px;
+    width: 45px;
+    height: 45px;
+  }
+  .wax-seal svg {
+    width: 45px;
+    height: 45px;
+  }
+  .envelope.open .env-letter {
+    transform: translateY(-90px);
+  }
+  .letter-title {
+    font-size: 1.8rem;
+  }
+
+  /* Music Button */
+  .music-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .music-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Modal Image Lightbox */
+  .lightbox-image {
+    max-width: 95%;
+    max-height: 70vh;
+    border-width: 10px;
+    border-bottom-width: 45px;
+  }
+  .lightbox-caption {
+    font-size: 2.2rem !important;
+    margin-top: -40px;
+  }
+  .lightbox-close-btn {
+    top: 15px;
+    right: 20px;
+    font-size: 45px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SMALL MOBILE PHONES (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+  /* Bawaan Loading Screen Anda */
+  .morse-left,
+  .morse-right,
+  .section-left,
+  .section-rigth {
+    display: none !important;
+  }
+  .loading-text {
+    font-size: 14px !important;
+    letter-spacing: 3px !important;
+  }
+  .bg-mobile {
+    display: block;
+  }
+
+  /* Background Animasi */
+  .bg-animasi .circle {
+    top: 5%;
+    right: 5%;
+    width: 70px;
+    height: 70px;
+  }
+  .inner-circle {
+    width: 35px;
+    height: 35px;
+  }
+  .barcode {
+    bottom: unset;
+    top: 10%;
+    left: 5%;
+  }
+  .anim-1,
+  .anim-2,
+  .anim-3 {
+    transform: scale(0.7);
+  }
+
+  /* Typography Extremes */
+  .hero-title {
+    font-size: 2.8rem !important;
+  }
+  .section-title {
+    font-size: 2.3rem !important;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  /* Glass Box Padding */
+  .glass-box {
+    padding: 20px 15px !important;
+    border-radius: 15px !important;
+  }
+
+  /* Gallery Folder adjustments */
+  .folder-navigation-list {
+    gap: 10px;
+  }
+  .folder-ui {
+    width: 60px;
+    height: 45px;
+  }
+  .folder-back::before {
+    top: -7px;
+    height: 10px;
+  }
+  .folder-label {
+    font-size: 0.85rem;
+  }
+
+  /* Polaroid Grid */
+  .polaroid-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  .polaroid-card {
+    padding: 6px 6px 15px 6px;
+  }
+  .polaroid-image {
+    height: 120px;
+  }
+  .polaroid-footer {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  /* Flip Cards Grid */
+  .flip-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .flip-card-wrapper {
+    height: 130px;
+  }
+  .flip-front span {
+    font-size: 2.2rem !important;
+  }
+  .flip-back p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Scrapbook Adjustments */
+  .scrapbook-board {
+    padding: 30px 15px !important;
+  }
+  .letter-main-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 20px;
+  }
+  .letter-text-line {
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important;
+  }
+  .signature-name {
+    font-size: 3rem !important;
+  }
+  .signature-quote {
+    font-size: 1.1rem !important;
+  }
+  .btn-whatsapp-massive {
+    padding: 12px 15px;
+    font-size: 1.05rem;
+  }
+  .scrapbook-pin {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Timeline Text Adjustments */
+  .tl-title {
+    font-size: 1.5rem !important;
+  }
+  .tl-desc {
+    font-size: 1rem !important;
+  }
+  .timeline-block {
+    padding-left: 55px !important;
+  }
+  .vertical-timeline-wrapper::after {
+    left: 20px;
+  }
+  .timeline-dot-wrapper {
+    left: 5px !important;
+    width: 26px;
+    height: 26px;
+  }
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. TALL DEVICES FIX (Untuk Layar Handphone yang Tinggi)
+   -------------------------------------------------------------------------- */
+@media only screen and (min-height: 800px) and (max-width: 600px) {
+  .container {
+    height: auto;
+    min-height: 70vh;
+  }
+  .mouse-scroll-indicator {
+    bottom: 8vh;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. LANDSCAPE MOBILE FIX (Mencegah tampilan terpotong saat layar landscape)
+   -------------------------------------------------------------------------- */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .envelope {
+    transform: scale(0.6);
+  }
+  .envelope:hover {
+    transform: scale(0.65) translateY(-10px);
+  }
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+  .container {
+    padding: 20px 0;
+  }
+  .glass-box {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
